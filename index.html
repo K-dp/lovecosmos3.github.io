@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="SIRSWA KULDEEP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I am student of 19MS batch in IISER Kolkata, an intermediate programmer, table tennis player, chess player, and guitarist.">
+    
+    <title>SIRSWA KULDEEP</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" > 
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="init.js"></script>
+    <script data-ad-client="ca-pub-2362770831935451" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <div id="global-container">
+        <div id="logo-container">
+            <img id="logo" src="KS.svg" width="1000" alt="" onmouseup="toggleTheme()"/>
+            <div id="name">SIRSWA KULDEEP</div>
+            <div id="links">
+                <a class="card-item" href="https://k-dp.github.io/Assignments-19MS-SEM@2" target="_blank">Assignments-19MS-SEM@2</a>
+            </div>
+            <div id="links">
+                <a class="card-item" href="https://k-dp.github.io/cv.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+        <div id="main-card-container" class="card-container">
+            <div id="aboutme" class="card card-dark card-row pressable">
+                <div class="card-title">
+                    Hello Dear Friends!
+                </div>
+                 <div class="card-inner-container">
+                    <div class="card-item">
+                        I am student of 19MS batch in <a href="https://www.iiserkol.ac.in/web/en/">IISER Kolkata</a>, and I am interested
+                        in doing major in mathematics or physics.
+                    </div>
+                    <div class="card-item">
+                        I am interested in computer sciences deparment too.
+                    </div>
+                    <div class="card-item">
+                        I am struggling myself and leaarning coding in unix, python, html and much more.
+                    </div>
+                    <div class="card-item">
+                        I am also learning GUITAR, playing Chess, Speed-Cuber & Table-Tennis.
+                    </div>
+                </div>
+            </div>
+            <div id="books" class="card card-dark">
+                <div class="card-title">
+                    Books which I liked most
+                </div>
+                <div>
+                    Books on Cosmology for Begginers
+                </div>
+                <ul class="card-inner-container">
+                    <li class="card-item">
+                        The Theory Of Everything,
+                        <i>Stephen Hawking</i>    
+                    </li>
+                    <li class="card-item">
+                        Stephen Hawking's Universe(Avaliable in IISER Kolkata's Library),
+                        <i>John Boslough</i>
+                    </li>
+                     <li class="card-item">
+                        Brief Histroy of Time,
+                        <i>Stephen Hawking</i>    
+                    </li>
+                     <li class="card-item">
+                        The Theory Of Relativity,
+                        <i>Albert Einstein</i>    
+                    </li>
+                </ul>
+                <div>
+                    Books On Motivation and Carrer Buildings
+                </div>
+                <ul class="card-inner-container">
+                    <li class="card-item">
+                        Rich Dad, Poor Dad,
+                        <i>Robert T. Kiyosaki</i>
+                    </li>
+                    <li class="card-item">
+                        Master Your Mind, Master Your Life(Free in Amazon Kindle),
+                        <i>Magnus Steele</i>
+                    </li>
+                    <li class="card-item">
+                        Free Your Mind(Free in Amazon Kindle),
+                        <i>M.P Neary</i>
+                    </li>
+                    <li class="card-item">
+                         For more on Motivation, Go to <a href="https://www.sandeepmaheshwari.com/myfavourites.aspx">Sandeep Maheshwari's Recommendation</a>,
+                    </li>
+                </ul>
+                <div>
+                    Novels And More
+                </div>
+                <ul class="card-inner-container">
+                    <li class="card-item">
+                        Can Love Happens Twice ?,
+                        <i>Ravinder Singh</i>
+                    </li>
+                </ul>
+            </div>
+            <div id="quote-card" class="card card-dark card-row pressable" onmouseup="showQuote(-1, quotes)">
+                <div class="card-inner-container">
+                    <div class="card-item" id="quote-text"></div>
+                </div>
+                <div id="quote-author" class="card-title"></div>
+            </div>
+            <div id="contacts" class="card card-dark card-row borderless"> 
+                <div class="card-inner-container">
+                    <a class="card-item" href="https://github.com/K-dp" target="_blank">Github</a>
+                    <a class="card-item" href="mailto:kuldeepsirswa@gmail.com" target="_blank">Gmail</a>
+                    <a class="card-item" href="https://www.facebook.com/kuldeep.sirswa.1" target="_blank">FaceBook</a>
+                    <a class="card-item" href="https://www.quora.com/profile/Kuldeep-Sirswa" target="_blank">Quora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        showQuote(-1, quotes);
+        
+        var x = document.getElementsByClassName("card");
+        var light;
+        
+        try {
+            light = JSON.parse(localStorage.getItem("light"));
+            if (light == null) {light = false;}
+        } catch (err) {
+            light = false;
+        }
+        
+        function lightTheme() {
+            document.getElementById("logo").classList.add("inverted");
+            document.getElementById("soundcloud-img").classList.add("inverted");
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("card-dark");
+            }
+            document.body.style.backgroundColor = "#f2f2f2";
+            document.getElementById("name").style.color = "#1d1f21";
+        }
+        function darkTheme() {
+            document.getElementById("logo").classList.remove("inverted");
+            document.getElementById("soundcloud-img").classList.remove("inverted");
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.add("card-dark");
+            }
+            document.body.style.backgroundColor = "#1d1f21";
+            document.getElementById("name").style.color = "#ffffff";
+        }
+        function toggleTheme() {
+            light = !light;
+            refreshTheme();
+        }
+        function refreshTheme() {
+            theme = light? lightTheme : darkTheme;
+            theme();
+            try {
+                localStorage.setItem("light", JSON.stringify(light));
+            } catch (err) {}
+        }
+        
+        var getJSON = function(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                var status = xhr.status;
+                if (status === 200) {
+                    callback(null, xhr.response);
+                } else {
+                    callback(status, xhr.response);
+                }
+            };
+            xhr.send();
+        }
+        
+        refreshTheme();
+    </script>
+</body>
+</html>
