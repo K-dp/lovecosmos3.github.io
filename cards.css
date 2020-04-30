@@ -1,0 +1,112 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+}
+
+/* Light cards */
+
+.card {
+    flex: 1 1 auto;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #afafaf;
+    padding: 1em;
+    margin: .5em .5em;
+}
+
+.card-row {
+    flex: 0 1 100%;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card.pressable:hover{
+    border-color: #000000;
+}
+
+.card.pressable:active {
+    border-color: #afafaf;
+}
+
+.card > .card-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0em 0em .35em 0em;
+}
+
+.card > .card-title > .card-icon {
+    float: right;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.card.card-row > .card-title > .card-icon {
+    float: inherit;
+    margin-left: 0;
+}
+
+.card > .card-inner-container > .card-item {
+    font-size: .8rem;
+    font-weight: 300;
+    color: #7f7f7f;
+    display: block;
+    margin: .5em 0em;
+}
+
+.card > .card-inner-container a {
+    color: #7f7f7f;
+}
+
+.card > .card-inner-container a:hover {
+    color: #000000;
+}
+
+/* Dark variants of cards */
+
+.card.card-dark {
+    background-color: #1d1f21;
+    border-color: #7f7f7f;
+}
+
+.card.card-dark:hover {
+    border-color: #ffffff;
+}
+
+.card.card-dark.pressable:active {
+    border-color: #7f7f7f;
+}
+
+.card.card-dark > .card-title {
+    color: #ffffff;
+}
+
+.card.card-dark > .card-inner-container > .card-item {
+    color: #afafaf;
+}
+
+.card.card-dark > .card-inner-container a {
+    color: #afafaf;
+}
+
+.card.card-dark > .card-inner-container a:hover {
+    color: #ffffff;
+}
+
+/* Borderless cards */
+.card.borderless {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+.card.borderless:hover{
+    box-shadow: none;
+}
